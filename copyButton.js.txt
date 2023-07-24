@@ -1,0 +1,12 @@
+function copyCode() {
+    var codeContainer = document.querySelector(".code-container");
+    var range = document.createRange();
+    range.selectNode(codeContainer);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+
+    // Puedes agregar un mensaje o efecto visual para indicar que el código se ha copiado
+    alert("Código copiado al portapapeles");
+}
